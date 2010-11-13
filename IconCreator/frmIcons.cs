@@ -22,31 +22,35 @@ namespace IconCreator
         {
             if (ofdImage.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                if (iconConverter == null)
-                {
-                    UnbindConverter(iconConverter);
-                }
-
                 iconConverter = new ImageToIcon.ImageToIcons(ofdImage.FileName);
-
-                BindConverter(iconConverter);
 
                 GroupBox gb1 = groupBox1;
                 this.splitter.Panel1.Controls.Clear();
                 this.splitter.Panel1.Controls.Add(gb1);
-                picMain.ImageLocation = ofdImage.FileName;
+                picMain.Image = iconConverter.BackingImage;
                 groupBox1.Visible = true;
             }
         }
 
-        private void BindConverter(ImageToIcon.ImageToIcons iconConverter)
+        private void chk16_CheckedChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
-        }
-
-        private void UnbindConverter(ImageToIcon.ImageToIcons iconConverter)
-        {
-            throw new NotImplementedException();
+            PictureBox img16;
+            if (chk16.Checked)
+            {
+                img16 = new PictureBox();
+                img16.Width = 16;
+                img16.Height = 16;
+                img16.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+                img16.Dock = DockStyle.Left;
+                img16.Image = iconConverter.Icon16.ToBitmap();
+            }
+            else
+            {
+                img16 = (from p in splitter.Panel1.Controls.OfType<PictureBox>()
+                         where p.Name == "img16"
+                         select p).First();
+                splitter.Panel1.Controls.Remove(img16);                
+            }
         }
     }
 }

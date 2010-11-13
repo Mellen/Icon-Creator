@@ -108,13 +108,12 @@ namespace ImageToIcon
 
         private Icon GenerateIcon(int width, int height)
         {
-            using(Bitmap bmp16 = _backingImage.GetThumbnailImage(width, height, () => true, System.IntPtr.Zero) as Bitmap)
+            //TODO - fix this to use a customer encoder for Icons
+            using (Bitmap icon = _backingImage.GetThumbnailImage(width, height, () => false, System.IntPtr.Zero) as Bitmap)
+            using(MemoryStream imgStream = new MemoryStream())
             {
-                using(MemoryStream imgStream = new MemoryStream())
-                {
-                    bmp16.Save(imgStream, System.Drawing.Imaging.ImageFormat.Icon);
-                    return new Icon(imgStream);
-                }
+                icon.Save(imgStream, System.Drawing.Imaging.ImageFormat.Icon);
+                return new Icon(imgStream);
             }
         }
 

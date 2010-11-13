@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.splitter = new System.Windows.Forms.SplitContainer();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chk256 = new System.Windows.Forms.CheckBox();
+            this.chk128 = new System.Windows.Forms.CheckBox();
+            this.ch64 = new System.Windows.Forms.CheckBox();
+            this.chk48 = new System.Windows.Forms.CheckBox();
+            this.chk32 = new System.Windows.Forms.CheckBox();
+            this.chk24 = new System.Windows.Forms.CheckBox();
+            this.chk16 = new System.Windows.Forms.CheckBox();
             this.mnuMain = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ofdImage = new System.Windows.Forms.OpenFileDialog();
             this.picMain = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chk16 = new System.Windows.Forms.CheckBox();
-            this.chk24 = new System.Windows.Forms.CheckBox();
-            this.chk32 = new System.Windows.Forms.CheckBox();
-            this.chk48 = new System.Windows.Forms.CheckBox();
-            this.ch64 = new System.Windows.Forms.CheckBox();
-            this.chk128 = new System.Windows.Forms.CheckBox();
-            this.chk256 = new System.Windows.Forms.CheckBox();
+            this.ofdImage = new System.Windows.Forms.OpenFileDialog();
             this.splitter.Panel1.SuspendLayout();
             this.splitter.Panel2.SuspendLayout();
             this.splitter.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.mnuMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMain)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitter
@@ -68,6 +68,107 @@
             this.splitter.Size = new System.Drawing.Size(639, 582);
             this.splitter.SplitterDistance = 256;
             this.splitter.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.chk256);
+            this.groupBox1.Controls.Add(this.chk128);
+            this.groupBox1.Controls.Add(this.ch64);
+            this.groupBox1.Controls.Add(this.chk48);
+            this.groupBox1.Controls.Add(this.chk32);
+            this.groupBox1.Controls.Add(this.chk24);
+            this.groupBox1.Controls.Add(this.chk16);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox1.Location = new System.Drawing.Point(0, 217);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(639, 39);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Icon Resolutions";
+            // 
+            // chk256
+            // 
+            this.chk256.AutoSize = true;
+            this.chk256.Dock = System.Windows.Forms.DockStyle.Left;
+            this.chk256.Location = new System.Drawing.Point(411, 16);
+            this.chk256.Name = "chk256";
+            this.chk256.Size = new System.Drawing.Size(73, 20);
+            this.chk256.TabIndex = 6;
+            this.chk256.Text = "256 x 256";
+            this.chk256.UseVisualStyleBackColor = true;
+            // 
+            // chk128
+            // 
+            this.chk128.AutoSize = true;
+            this.chk128.Dock = System.Windows.Forms.DockStyle.Left;
+            this.chk128.Location = new System.Drawing.Point(333, 16);
+            this.chk128.Name = "chk128";
+            this.chk128.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.chk128.Size = new System.Drawing.Size(78, 20);
+            this.chk128.TabIndex = 5;
+            this.chk128.Text = "128 x 128";
+            this.chk128.UseVisualStyleBackColor = true;
+            // 
+            // ch64
+            // 
+            this.ch64.AutoSize = true;
+            this.ch64.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ch64.Location = new System.Drawing.Point(267, 16);
+            this.ch64.Name = "ch64";
+            this.ch64.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.ch64.Size = new System.Drawing.Size(66, 20);
+            this.ch64.TabIndex = 4;
+            this.ch64.Text = "64 x 64";
+            this.ch64.UseVisualStyleBackColor = true;
+            // 
+            // chk48
+            // 
+            this.chk48.AutoSize = true;
+            this.chk48.Dock = System.Windows.Forms.DockStyle.Left;
+            this.chk48.Location = new System.Drawing.Point(201, 16);
+            this.chk48.Name = "chk48";
+            this.chk48.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.chk48.Size = new System.Drawing.Size(66, 20);
+            this.chk48.TabIndex = 3;
+            this.chk48.Text = "48 x 48";
+            this.chk48.UseVisualStyleBackColor = true;
+            // 
+            // chk32
+            // 
+            this.chk32.AutoSize = true;
+            this.chk32.Dock = System.Windows.Forms.DockStyle.Left;
+            this.chk32.Location = new System.Drawing.Point(135, 16);
+            this.chk32.Name = "chk32";
+            this.chk32.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.chk32.Size = new System.Drawing.Size(66, 20);
+            this.chk32.TabIndex = 2;
+            this.chk32.Text = "32 x 32";
+            this.chk32.UseVisualStyleBackColor = true;
+            // 
+            // chk24
+            // 
+            this.chk24.AutoSize = true;
+            this.chk24.Dock = System.Windows.Forms.DockStyle.Left;
+            this.chk24.Location = new System.Drawing.Point(69, 16);
+            this.chk24.Name = "chk24";
+            this.chk24.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.chk24.Size = new System.Drawing.Size(66, 20);
+            this.chk24.TabIndex = 1;
+            this.chk24.Text = "24 x 24";
+            this.chk24.UseVisualStyleBackColor = true;
+            // 
+            // chk16
+            // 
+            this.chk16.AutoSize = true;
+            this.chk16.Dock = System.Windows.Forms.DockStyle.Left;
+            this.chk16.Location = new System.Drawing.Point(3, 16);
+            this.chk16.Name = "chk16";
+            this.chk16.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.chk16.Size = new System.Drawing.Size(66, 20);
+            this.chk16.TabIndex = 0;
+            this.chk16.Text = "16 x 16";
+            this.chk16.UseVisualStyleBackColor = true;
+            this.chk16.CheckedChanged += new System.EventHandler(this.chk16_CheckedChanged);
             // 
             // mnuMain
             // 
@@ -93,11 +194,6 @@
             this.loadImageToolStripMenuItem.Text = "&Load Image";
             this.loadImageToolStripMenuItem.Click += new System.EventHandler(this.loadImageToolStripMenuItem_Click);
             // 
-            // ofdImage
-            // 
-            this.ofdImage.Filter = "Bitmap|*.bmp|JPEG|*.jpg|GIF|*.gif|PNG|*.png";
-            this.ofdImage.Title = "Select an image to turn into an icon";
-            // 
             // picMain
             // 
             this.picMain.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -108,105 +204,10 @@
             this.picMain.TabIndex = 0;
             this.picMain.TabStop = false;
             // 
-            // groupBox1
+            // ofdImage
             // 
-            this.groupBox1.Controls.Add(this.chk256);
-            this.groupBox1.Controls.Add(this.chk128);
-            this.groupBox1.Controls.Add(this.ch64);
-            this.groupBox1.Controls.Add(this.chk48);
-            this.groupBox1.Controls.Add(this.chk32);
-            this.groupBox1.Controls.Add(this.chk24);
-            this.groupBox1.Controls.Add(this.chk16);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 217);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(639, 39);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Icon Resolutions";
-            // 
-            // chk16
-            // 
-            this.chk16.AutoSize = true;
-            this.chk16.Dock = System.Windows.Forms.DockStyle.Left;
-            this.chk16.Location = new System.Drawing.Point(3, 16);
-            this.chk16.Name = "chk16";
-            this.chk16.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.chk16.Size = new System.Drawing.Size(66, 20);
-            this.chk16.TabIndex = 0;
-            this.chk16.Text = "16 x 16";
-            this.chk16.UseVisualStyleBackColor = true;
-            // 
-            // chk24
-            // 
-            this.chk24.AutoSize = true;
-            this.chk24.Dock = System.Windows.Forms.DockStyle.Left;
-            this.chk24.Location = new System.Drawing.Point(69, 16);
-            this.chk24.Name = "chk24";
-            this.chk24.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.chk24.Size = new System.Drawing.Size(66, 20);
-            this.chk24.TabIndex = 1;
-            this.chk24.Text = "24 x 24";
-            this.chk24.UseVisualStyleBackColor = true;
-            // 
-            // chk32
-            // 
-            this.chk32.AutoSize = true;
-            this.chk32.Dock = System.Windows.Forms.DockStyle.Left;
-            this.chk32.Location = new System.Drawing.Point(135, 16);
-            this.chk32.Name = "chk32";
-            this.chk32.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.chk32.Size = new System.Drawing.Size(66, 20);
-            this.chk32.TabIndex = 2;
-            this.chk32.Text = "32 x 32";
-            this.chk32.UseVisualStyleBackColor = true;
-            // 
-            // chk48
-            // 
-            this.chk48.AutoSize = true;
-            this.chk48.Dock = System.Windows.Forms.DockStyle.Left;
-            this.chk48.Location = new System.Drawing.Point(201, 16);
-            this.chk48.Name = "chk48";
-            this.chk48.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.chk48.Size = new System.Drawing.Size(66, 20);
-            this.chk48.TabIndex = 3;
-            this.chk48.Text = "48 x 48";
-            this.chk48.UseVisualStyleBackColor = true;
-            // 
-            // ch64
-            // 
-            this.ch64.AutoSize = true;
-            this.ch64.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ch64.Location = new System.Drawing.Point(267, 16);
-            this.ch64.Name = "ch64";
-            this.ch64.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.ch64.Size = new System.Drawing.Size(66, 20);
-            this.ch64.TabIndex = 4;
-            this.ch64.Text = "64 x 64";
-            this.ch64.UseVisualStyleBackColor = true;
-            // 
-            // chk128
-            // 
-            this.chk128.AutoSize = true;
-            this.chk128.Dock = System.Windows.Forms.DockStyle.Left;
-            this.chk128.Location = new System.Drawing.Point(333, 16);
-            this.chk128.Name = "chk128";
-            this.chk128.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.chk128.Size = new System.Drawing.Size(78, 20);
-            this.chk128.TabIndex = 5;
-            this.chk128.Text = "128 x 128";
-            this.chk128.UseVisualStyleBackColor = true;
-            // 
-            // chk256
-            // 
-            this.chk256.AutoSize = true;
-            this.chk256.Dock = System.Windows.Forms.DockStyle.Left;
-            this.chk256.Location = new System.Drawing.Point(411, 16);
-            this.chk256.Name = "chk256";
-            this.chk256.Size = new System.Drawing.Size(73, 20);
-            this.chk256.TabIndex = 6;
-            this.chk256.Text = "256 x 256";
-            this.chk256.UseVisualStyleBackColor = true;
+            this.ofdImage.Filter = "Bitmap|*.bmp|JPEG|*.jpg|GIF|*.gif|PNG|*.png";
+            this.ofdImage.Title = "Select an image to turn into an icon";
             // 
             // frmIcons
             // 
@@ -221,11 +222,11 @@
             this.splitter.Panel1.PerformLayout();
             this.splitter.Panel2.ResumeLayout(false);
             this.splitter.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.mnuMain.ResumeLayout(false);
             this.mnuMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMain)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
