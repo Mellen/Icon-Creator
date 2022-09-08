@@ -106,15 +106,53 @@ namespace ImageToIcon
             }
         }
 
+        public Icon GetIconBySize(int size)
+        {
+            Icon icon = Icon64;
+            switch(size)
+            {
+                case 16:
+                    icon = Icon16;
+                    break;
+                case 24:
+                    icon = Icon24;
+                    break;
+                case 32:
+                    icon = Icon32;
+                    break;
+                case 64:
+                    icon = Icon64;
+                    break;
+                case 128:
+                    icon = Icon128;
+                    break;
+                case 256:
+                    icon = Icon256;
+                    break;
+                default:
+                    icon = Icon64;
+                    break;
+            }
+
+            return icon;
+        }
+
         private Icon GenerateIcon(int width, int height)
         {
-            //TODO - fix this to use a customer encoder for Icons
+            Icon result = null;
+            
             using (Bitmap icon = _backingImage.GetThumbnailImage(width, height, () => false, System.IntPtr.Zero) as Bitmap)
-            using(MemoryStream imgStream = new MemoryStream())
             {
-                icon.Save(imgStream, System.Drawing.Imaging.ImageFormat.Icon);
-                return new Icon(imgStream);
+                MemoryStream iconStream = IconGenerator.GenerateIconStreamFromBitmap(icon);
+
+                iconStream.Seek(0, SeekOrigin.Begin);
+
+                result = new Icon(iconStream);
+
+                iconStream.Close();
             }
+
+            return result;
         }
 
         public void Save(string filename)

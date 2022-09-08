@@ -42,6 +42,7 @@
             this.loadImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.picMain = new System.Windows.Forms.PictureBox();
             this.ofdImage = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.splitter)).BeginInit();
             this.splitter.Panel1.SuspendLayout();
             this.splitter.Panel2.SuspendLayout();
             this.splitter.SuspendLayout();
@@ -96,6 +97,7 @@
             this.chk256.TabIndex = 6;
             this.chk256.Text = "256 x 256";
             this.chk256.UseVisualStyleBackColor = true;
+            this.chk256.CheckedChanged += new System.EventHandler(this.CheckedChanged);
             // 
             // chk128
             // 
@@ -108,6 +110,7 @@
             this.chk128.TabIndex = 5;
             this.chk128.Text = "128 x 128";
             this.chk128.UseVisualStyleBackColor = true;
+            this.chk128.CheckedChanged += new System.EventHandler(this.CheckedChanged);
             // 
             // ch64
             // 
@@ -120,6 +123,7 @@
             this.ch64.TabIndex = 4;
             this.ch64.Text = "64 x 64";
             this.ch64.UseVisualStyleBackColor = true;
+            this.ch64.CheckedChanged += new System.EventHandler(this.CheckedChanged);
             // 
             // chk48
             // 
@@ -132,6 +136,7 @@
             this.chk48.TabIndex = 3;
             this.chk48.Text = "48 x 48";
             this.chk48.UseVisualStyleBackColor = true;
+            this.chk48.CheckedChanged += new System.EventHandler(this.CheckedChanged);
             // 
             // chk32
             // 
@@ -144,6 +149,7 @@
             this.chk32.TabIndex = 2;
             this.chk32.Text = "32 x 32";
             this.chk32.UseVisualStyleBackColor = true;
+            this.chk32.CheckedChanged += new System.EventHandler(this.CheckedChanged);
             // 
             // chk24
             // 
@@ -156,6 +162,7 @@
             this.chk24.TabIndex = 1;
             this.chk24.Text = "24 x 24";
             this.chk24.UseVisualStyleBackColor = true;
+            this.chk24.CheckedChanged += new System.EventHandler(this.CheckedChanged);
             // 
             // chk16
             // 
@@ -168,7 +175,7 @@
             this.chk16.TabIndex = 0;
             this.chk16.Text = "16 x 16";
             this.chk16.UseVisualStyleBackColor = true;
-            this.chk16.CheckedChanged += new System.EventHandler(this.chk16_CheckedChanged);
+            this.chk16.CheckedChanged += new System.EventHandler(this.CheckedChanged);
             // 
             // mnuMain
             // 
@@ -221,6 +228,7 @@
             this.splitter.Panel1.ResumeLayout(false);
             this.splitter.Panel1.PerformLayout();
             this.splitter.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitter)).EndInit();
             this.splitter.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

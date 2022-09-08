@@ -32,25 +32,40 @@ namespace IconCreator
             }
         }
 
-        private void chk16_CheckedChanged(object sender, EventArgs e)
+        private void CheckedChanged(object sender, EventArgs e)
         {
-            PictureBox img16;
-            if (chk16.Checked)
+            PictureBox img;
+            string name;
+            int width;
+            int height;
+            CheckBox chk = sender as CheckBox;
+            string sizeStr = chk.Name.Substring(3);
+            name = "img" + sizeStr;
+            width = height = int.Parse(sizeStr);
+            if (chk.Checked)
             {
-                img16 = new PictureBox();
-                img16.Width = 16;
-                img16.Height = 16;
-                img16.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-                img16.Dock = DockStyle.Left;
-                img16.Image = iconConverter.Icon16.ToBitmap();
+                img = CreateBox(name, width, height, iconConverter.GetIconBySize(width).ToBitmap());
+                splitter.Panel1.Controls.Add(img);
             }
             else
             {
-                img16 = (from p in splitter.Panel1.Controls.OfType<PictureBox>()
-                         where p.Name == "img16"
+                img = (from p in splitter.Panel1.Controls.OfType<PictureBox>()
+                         where p.Name == name
                          select p).First();
-                splitter.Panel1.Controls.Remove(img16);                
+                splitter.Panel1.Controls.Remove(img);
             }
+        }
+
+        private PictureBox CreateBox(string name, int width, int height, Image image)
+        {
+            PictureBox box = new PictureBox();
+            box.Width = width;
+            box.Height = height;
+            box.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            box.Dock = DockStyle.Left;
+            box.Image = image;
+            box.Name = name;
+            return box;
         }
     }
 }
