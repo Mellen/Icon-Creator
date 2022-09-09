@@ -32,7 +32,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chk256 = new System.Windows.Forms.CheckBox();
             this.chk128 = new System.Windows.Forms.CheckBox();
-            this.ch64 = new System.Windows.Forms.CheckBox();
+            this.chk64 = new System.Windows.Forms.CheckBox();
             this.chk48 = new System.Windows.Forms.CheckBox();
             this.chk32 = new System.Windows.Forms.CheckBox();
             this.chk24 = new System.Windows.Forms.CheckBox();
@@ -42,6 +42,14 @@
             this.loadImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.picMain = new System.Windows.Forms.PictureBox();
             this.ofdImage = new System.Windows.Forms.OpenFileDialog();
+            this.tableImageHolder = new System.Windows.Forms.TableLayoutPanel();
+            this.box256 = new System.Windows.Forms.PictureBox();
+            this.box128 = new System.Windows.Forms.PictureBox();
+            this.box64 = new System.Windows.Forms.PictureBox();
+            this.box48 = new System.Windows.Forms.PictureBox();
+            this.box32 = new System.Windows.Forms.PictureBox();
+            this.box24 = new System.Windows.Forms.PictureBox();
+            this.box16 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitter)).BeginInit();
             this.splitter.Panel1.SuspendLayout();
             this.splitter.Panel2.SuspendLayout();
@@ -49,6 +57,14 @@
             this.groupBox1.SuspendLayout();
             this.mnuMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMain)).BeginInit();
+            this.tableImageHolder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.box256)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box128)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box64)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box48)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box16)).BeginInit();
             this.SuspendLayout();
             // 
             // splitter
@@ -60,6 +76,7 @@
             // 
             // splitter.Panel1
             // 
+            this.splitter.Panel1.Controls.Add(this.tableImageHolder);
             this.splitter.Panel1.Controls.Add(this.groupBox1);
             this.splitter.Panel1.Controls.Add(this.mnuMain);
             // 
@@ -74,7 +91,7 @@
             // 
             this.groupBox1.Controls.Add(this.chk256);
             this.groupBox1.Controls.Add(this.chk128);
-            this.groupBox1.Controls.Add(this.ch64);
+            this.groupBox1.Controls.Add(this.chk64);
             this.groupBox1.Controls.Add(this.chk48);
             this.groupBox1.Controls.Add(this.chk32);
             this.groupBox1.Controls.Add(this.chk24);
@@ -112,18 +129,18 @@
             this.chk128.UseVisualStyleBackColor = true;
             this.chk128.CheckedChanged += new System.EventHandler(this.CheckedChanged);
             // 
-            // ch64
+            // chk64
             // 
-            this.ch64.AutoSize = true;
-            this.ch64.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ch64.Location = new System.Drawing.Point(267, 16);
-            this.ch64.Name = "ch64";
-            this.ch64.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.ch64.Size = new System.Drawing.Size(66, 20);
-            this.ch64.TabIndex = 4;
-            this.ch64.Text = "64 x 64";
-            this.ch64.UseVisualStyleBackColor = true;
-            this.ch64.CheckedChanged += new System.EventHandler(this.CheckedChanged);
+            this.chk64.AutoSize = true;
+            this.chk64.Dock = System.Windows.Forms.DockStyle.Left;
+            this.chk64.Location = new System.Drawing.Point(267, 16);
+            this.chk64.Name = "chk64";
+            this.chk64.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.chk64.Size = new System.Drawing.Size(66, 20);
+            this.chk64.TabIndex = 4;
+            this.chk64.Text = "64 x 64";
+            this.chk64.UseVisualStyleBackColor = true;
+            this.chk64.CheckedChanged += new System.EventHandler(this.CheckedChanged);
             // 
             // chk48
             // 
@@ -216,6 +233,95 @@
             this.ofdImage.Filter = "Bitmap|*.bmp|JPEG|*.jpg|GIF|*.gif|PNG|*.png";
             this.ofdImage.Title = "Select an image to turn into an icon";
             // 
+            // tableImageHolder
+            // 
+            this.tableImageHolder.ColumnCount = 7;
+            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.816196F));
+            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.229304F));
+            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.642414F));
+            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.458609F));
+            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.26478F));
+            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.52957F));
+            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.05913F));
+            this.tableImageHolder.Controls.Add(this.box256, 6, 0);
+            this.tableImageHolder.Controls.Add(this.box128, 5, 0);
+            this.tableImageHolder.Controls.Add(this.box64, 4, 0);
+            this.tableImageHolder.Controls.Add(this.box48, 3, 0);
+            this.tableImageHolder.Controls.Add(this.box32, 2, 0);
+            this.tableImageHolder.Controls.Add(this.box24, 1, 0);
+            this.tableImageHolder.Controls.Add(this.box16, 0, 0);
+            this.tableImageHolder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableImageHolder.Location = new System.Drawing.Point(0, 24);
+            this.tableImageHolder.Name = "tableImageHolder";
+            this.tableImageHolder.RowCount = 1;
+            this.tableImageHolder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableImageHolder.Size = new System.Drawing.Size(639, 193);
+            this.tableImageHolder.TabIndex = 2;
+            // 
+            // box256
+            // 
+            this.box256.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box256.Location = new System.Drawing.Point(351, 3);
+            this.box256.Name = "box256";
+            this.box256.Size = new System.Drawing.Size(285, 187);
+            this.box256.TabIndex = 0;
+            this.box256.TabStop = false;
+            // 
+            // box128
+            // 
+            this.box128.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box128.InitialImage = null;
+            this.box128.Location = new System.Drawing.Point(208, 3);
+            this.box128.Name = "box128";
+            this.box128.Size = new System.Drawing.Size(137, 187);
+            this.box128.TabIndex = 1;
+            this.box128.TabStop = false;
+            // 
+            // box64
+            // 
+            this.box64.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box64.Location = new System.Drawing.Point(137, 3);
+            this.box64.Name = "box64";
+            this.box64.Size = new System.Drawing.Size(65, 187);
+            this.box64.TabIndex = 2;
+            this.box64.TabStop = false;
+            // 
+            // box48
+            // 
+            this.box48.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box48.Location = new System.Drawing.Point(83, 3);
+            this.box48.Name = "box48";
+            this.box48.Size = new System.Drawing.Size(48, 187);
+            this.box48.TabIndex = 3;
+            this.box48.TabStop = false;
+            // 
+            // box32
+            // 
+            this.box32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box32.Location = new System.Drawing.Point(47, 3);
+            this.box32.Name = "box32";
+            this.box32.Size = new System.Drawing.Size(30, 187);
+            this.box32.TabIndex = 4;
+            this.box32.TabStop = false;
+            // 
+            // box24
+            // 
+            this.box24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box24.Location = new System.Drawing.Point(20, 3);
+            this.box24.Name = "box24";
+            this.box24.Size = new System.Drawing.Size(21, 187);
+            this.box24.TabIndex = 5;
+            this.box24.TabStop = false;
+            // 
+            // box16
+            // 
+            this.box16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box16.Location = new System.Drawing.Point(3, 3);
+            this.box16.Name = "box16";
+            this.box16.Size = new System.Drawing.Size(11, 187);
+            this.box16.TabIndex = 6;
+            this.box16.TabStop = false;
+            // 
             // frmIcons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,6 +341,14 @@
             this.mnuMain.ResumeLayout(false);
             this.mnuMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMain)).EndInit();
+            this.tableImageHolder.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.box256)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box128)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box64)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box48)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box16)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,8 +367,16 @@
         private System.Windows.Forms.CheckBox chk32;
         private System.Windows.Forms.CheckBox chk48;
         private System.Windows.Forms.CheckBox chk128;
-        private System.Windows.Forms.CheckBox ch64;
+        private System.Windows.Forms.CheckBox chk64;
         private System.Windows.Forms.CheckBox chk256;
+        private System.Windows.Forms.TableLayoutPanel tableImageHolder;
+        private System.Windows.Forms.PictureBox box256;
+        private System.Windows.Forms.PictureBox box128;
+        private System.Windows.Forms.PictureBox box64;
+        private System.Windows.Forms.PictureBox box48;
+        private System.Windows.Forms.PictureBox box32;
+        private System.Windows.Forms.PictureBox box24;
+        private System.Windows.Forms.PictureBox box16;
     }
 }
 

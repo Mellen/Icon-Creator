@@ -120,6 +120,9 @@ namespace ImageToIcon
                 case 32:
                     icon = Icon32;
                     break;
+                case 48:
+                    icon = Icon48;
+                    break;
                 case 64:
                     icon = Icon64;
                     break;
