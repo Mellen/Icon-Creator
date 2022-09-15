@@ -2,6 +2,7 @@
 using System.Text;
 using System.IO;
 using System;
+using System.Collections.Generic;
 
 namespace ImageToIcon
 {
@@ -158,9 +159,57 @@ namespace ImageToIcon
             return result;
         }
 
-        public void Save(string filename)
+        public void Save(string filename, bool use16 = true, bool use24 = true, bool use32 = true, bool use48 = true, bool use64 = true, bool use128 = true, bool use256 = true)
         {
-            throw new NotImplementedException();
+            List<Bitmap> imagesToAdd = new List<Bitmap>();
+
+            if(use16)
+            {
+                Bitmap icon = _backingImage.GetThumbnailImage(16, 16, () => false, IntPtr.Zero) as Bitmap;
+                imagesToAdd.Add(icon);
+            }
+
+            if (use24)
+            {
+                Bitmap icon = _backingImage.GetThumbnailImage(24, 24, () => false, IntPtr.Zero) as Bitmap;
+                imagesToAdd.Add(icon);
+            }
+
+            if (use32)
+            {
+                Bitmap icon = _backingImage.GetThumbnailImage(32, 32, () => false, IntPtr.Zero) as Bitmap;
+                imagesToAdd.Add(icon);
+            }
+
+            if (use48)
+            {
+                Bitmap icon = _backingImage.GetThumbnailImage(48, 48, () => false, IntPtr.Zero) as Bitmap;
+                imagesToAdd.Add(icon);
+            }
+
+            if (use64)
+            {
+                Bitmap icon = _backingImage.GetThumbnailImage(64, 64, () => false, IntPtr.Zero) as Bitmap;
+                imagesToAdd.Add(icon);
+            }
+
+            if (use128)
+            {
+                Bitmap icon = _backingImage.GetThumbnailImage(128, 128, () => false, IntPtr.Zero) as Bitmap;
+                imagesToAdd.Add(icon);
+            }
+
+            if (use256)
+            {
+                Bitmap icon = _backingImage.GetThumbnailImage(256, 256, () => false, IntPtr.Zero) as Bitmap;
+                imagesToAdd.Add(icon);
+            }
+
+            if (imagesToAdd.Count > 0)
+            {
+                MemoryStream iconStream = IconGenerator.GenerateIconStreamFromMultipleBitmaps(imagesToAdd.ToArray());
+                File.WriteAllBytes(filename, iconStream.ToArray());
+            }
         }
 
         public ImageToIcons(string imagePath)
