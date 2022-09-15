@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.splitter = new System.Windows.Forms.SplitContainer();
+            this.tableImageHolder = new System.Windows.Forms.TableLayoutPanel();
+            this.box256 = new System.Windows.Forms.PictureBox();
+            this.box128 = new System.Windows.Forms.PictureBox();
+            this.box64 = new System.Windows.Forms.PictureBox();
+            this.box48 = new System.Windows.Forms.PictureBox();
+            this.box32 = new System.Windows.Forms.PictureBox();
+            this.box24 = new System.Windows.Forms.PictureBox();
+            this.box16 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chk256 = new System.Windows.Forms.CheckBox();
             this.chk128 = new System.Windows.Forms.CheckBox();
@@ -42,21 +50,12 @@
             this.loadImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.picMain = new System.Windows.Forms.PictureBox();
             this.ofdImage = new System.Windows.Forms.OpenFileDialog();
-            this.tableImageHolder = new System.Windows.Forms.TableLayoutPanel();
-            this.box256 = new System.Windows.Forms.PictureBox();
-            this.box128 = new System.Windows.Forms.PictureBox();
-            this.box64 = new System.Windows.Forms.PictureBox();
-            this.box48 = new System.Windows.Forms.PictureBox();
-            this.box32 = new System.Windows.Forms.PictureBox();
-            this.box24 = new System.Windows.Forms.PictureBox();
-            this.box16 = new System.Windows.Forms.PictureBox();
+            this.saveNewIconToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sfdIcon = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitter)).BeginInit();
             this.splitter.Panel1.SuspendLayout();
             this.splitter.Panel2.SuspendLayout();
             this.splitter.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.mnuMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMain)).BeginInit();
             this.tableImageHolder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.box256)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box128)).BeginInit();
@@ -65,6 +64,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.box32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box16)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.mnuMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMain)).BeginInit();
             this.SuspendLayout();
             // 
             // splitter
@@ -86,6 +88,95 @@
             this.splitter.Size = new System.Drawing.Size(639, 582);
             this.splitter.SplitterDistance = 256;
             this.splitter.TabIndex = 0;
+            // 
+            // tableImageHolder
+            // 
+            this.tableImageHolder.ColumnCount = 7;
+            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.816196F));
+            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.229304F));
+            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.642414F));
+            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.458609F));
+            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.26478F));
+            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.52957F));
+            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.05913F));
+            this.tableImageHolder.Controls.Add(this.box256, 6, 0);
+            this.tableImageHolder.Controls.Add(this.box128, 5, 0);
+            this.tableImageHolder.Controls.Add(this.box64, 4, 0);
+            this.tableImageHolder.Controls.Add(this.box48, 3, 0);
+            this.tableImageHolder.Controls.Add(this.box32, 2, 0);
+            this.tableImageHolder.Controls.Add(this.box24, 1, 0);
+            this.tableImageHolder.Controls.Add(this.box16, 0, 0);
+            this.tableImageHolder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableImageHolder.Location = new System.Drawing.Point(0, 24);
+            this.tableImageHolder.Name = "tableImageHolder";
+            this.tableImageHolder.RowCount = 1;
+            this.tableImageHolder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableImageHolder.Size = new System.Drawing.Size(639, 193);
+            this.tableImageHolder.TabIndex = 2;
+            // 
+            // box256
+            // 
+            this.box256.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box256.Location = new System.Drawing.Point(351, 3);
+            this.box256.Name = "box256";
+            this.box256.Size = new System.Drawing.Size(285, 187);
+            this.box256.TabIndex = 0;
+            this.box256.TabStop = false;
+            // 
+            // box128
+            // 
+            this.box128.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box128.InitialImage = null;
+            this.box128.Location = new System.Drawing.Point(208, 3);
+            this.box128.Name = "box128";
+            this.box128.Size = new System.Drawing.Size(137, 187);
+            this.box128.TabIndex = 1;
+            this.box128.TabStop = false;
+            // 
+            // box64
+            // 
+            this.box64.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box64.Location = new System.Drawing.Point(137, 3);
+            this.box64.Name = "box64";
+            this.box64.Size = new System.Drawing.Size(65, 187);
+            this.box64.TabIndex = 2;
+            this.box64.TabStop = false;
+            // 
+            // box48
+            // 
+            this.box48.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box48.Location = new System.Drawing.Point(83, 3);
+            this.box48.Name = "box48";
+            this.box48.Size = new System.Drawing.Size(48, 187);
+            this.box48.TabIndex = 3;
+            this.box48.TabStop = false;
+            // 
+            // box32
+            // 
+            this.box32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box32.Location = new System.Drawing.Point(47, 3);
+            this.box32.Name = "box32";
+            this.box32.Size = new System.Drawing.Size(30, 187);
+            this.box32.TabIndex = 4;
+            this.box32.TabStop = false;
+            // 
+            // box24
+            // 
+            this.box24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box24.Location = new System.Drawing.Point(20, 3);
+            this.box24.Name = "box24";
+            this.box24.Size = new System.Drawing.Size(21, 187);
+            this.box24.TabIndex = 5;
+            this.box24.TabStop = false;
+            // 
+            // box16
+            // 
+            this.box16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box16.Location = new System.Drawing.Point(3, 3);
+            this.box16.Name = "box16";
+            this.box16.Size = new System.Drawing.Size(11, 187);
+            this.box16.TabIndex = 6;
+            this.box16.TabStop = false;
             // 
             // groupBox1
             // 
@@ -206,7 +297,8 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadImageToolStripMenuItem});
+            this.loadImageToolStripMenuItem,
+            this.saveNewIconToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
@@ -214,7 +306,7 @@
             // loadImageToolStripMenuItem
             // 
             this.loadImageToolStripMenuItem.Name = "loadImageToolStripMenuItem";
-            this.loadImageToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.loadImageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loadImageToolStripMenuItem.Text = "&Load Image";
             this.loadImageToolStripMenuItem.Click += new System.EventHandler(this.loadImageToolStripMenuItem_Click);
             // 
@@ -233,94 +325,12 @@
             this.ofdImage.Filter = "Bitmap|*.bmp|JPEG|*.jpg|GIF|*.gif|PNG|*.png";
             this.ofdImage.Title = "Select an image to turn into an icon";
             // 
-            // tableImageHolder
+            // saveNewIconToolStripMenuItem
             // 
-            this.tableImageHolder.ColumnCount = 7;
-            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.816196F));
-            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.229304F));
-            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.642414F));
-            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.458609F));
-            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.26478F));
-            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.52957F));
-            this.tableImageHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.05913F));
-            this.tableImageHolder.Controls.Add(this.box256, 6, 0);
-            this.tableImageHolder.Controls.Add(this.box128, 5, 0);
-            this.tableImageHolder.Controls.Add(this.box64, 4, 0);
-            this.tableImageHolder.Controls.Add(this.box48, 3, 0);
-            this.tableImageHolder.Controls.Add(this.box32, 2, 0);
-            this.tableImageHolder.Controls.Add(this.box24, 1, 0);
-            this.tableImageHolder.Controls.Add(this.box16, 0, 0);
-            this.tableImageHolder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableImageHolder.Location = new System.Drawing.Point(0, 24);
-            this.tableImageHolder.Name = "tableImageHolder";
-            this.tableImageHolder.RowCount = 1;
-            this.tableImageHolder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableImageHolder.Size = new System.Drawing.Size(639, 193);
-            this.tableImageHolder.TabIndex = 2;
-            // 
-            // box256
-            // 
-            this.box256.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.box256.Location = new System.Drawing.Point(351, 3);
-            this.box256.Name = "box256";
-            this.box256.Size = new System.Drawing.Size(285, 187);
-            this.box256.TabIndex = 0;
-            this.box256.TabStop = false;
-            // 
-            // box128
-            // 
-            this.box128.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.box128.InitialImage = null;
-            this.box128.Location = new System.Drawing.Point(208, 3);
-            this.box128.Name = "box128";
-            this.box128.Size = new System.Drawing.Size(137, 187);
-            this.box128.TabIndex = 1;
-            this.box128.TabStop = false;
-            // 
-            // box64
-            // 
-            this.box64.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.box64.Location = new System.Drawing.Point(137, 3);
-            this.box64.Name = "box64";
-            this.box64.Size = new System.Drawing.Size(65, 187);
-            this.box64.TabIndex = 2;
-            this.box64.TabStop = false;
-            // 
-            // box48
-            // 
-            this.box48.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.box48.Location = new System.Drawing.Point(83, 3);
-            this.box48.Name = "box48";
-            this.box48.Size = new System.Drawing.Size(48, 187);
-            this.box48.TabIndex = 3;
-            this.box48.TabStop = false;
-            // 
-            // box32
-            // 
-            this.box32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.box32.Location = new System.Drawing.Point(47, 3);
-            this.box32.Name = "box32";
-            this.box32.Size = new System.Drawing.Size(30, 187);
-            this.box32.TabIndex = 4;
-            this.box32.TabStop = false;
-            // 
-            // box24
-            // 
-            this.box24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.box24.Location = new System.Drawing.Point(20, 3);
-            this.box24.Name = "box24";
-            this.box24.Size = new System.Drawing.Size(21, 187);
-            this.box24.TabIndex = 5;
-            this.box24.TabStop = false;
-            // 
-            // box16
-            // 
-            this.box16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.box16.Location = new System.Drawing.Point(3, 3);
-            this.box16.Name = "box16";
-            this.box16.Size = new System.Drawing.Size(11, 187);
-            this.box16.TabIndex = 6;
-            this.box16.TabStop = false;
+            this.saveNewIconToolStripMenuItem.Name = "saveNewIconToolStripMenuItem";
+            this.saveNewIconToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveNewIconToolStripMenuItem.Text = "&Save New Icon";
+            this.saveNewIconToolStripMenuItem.Click += new System.EventHandler(this.saveNewIconToolStripMenuItem_Click);
             // 
             // frmIcons
             // 
@@ -336,11 +346,6 @@
             this.splitter.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitter)).EndInit();
             this.splitter.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.mnuMain.ResumeLayout(false);
-            this.mnuMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMain)).EndInit();
             this.tableImageHolder.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.box256)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.box128)).EndInit();
@@ -349,6 +354,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.box32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.box24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.box16)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.mnuMain.ResumeLayout(false);
+            this.mnuMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMain)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -377,6 +387,8 @@
         private System.Windows.Forms.PictureBox box32;
         private System.Windows.Forms.PictureBox box24;
         private System.Windows.Forms.PictureBox box16;
+        private System.Windows.Forms.ToolStripMenuItem saveNewIconToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog sfdIcon;
     }
 }
 
